@@ -1,0 +1,112 @@
+/*Header*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding-left: 10px;
+    background-color: rgb(64,64,64);
+    color: white;
+}
+
+img{
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+header h1 {
+    color: rgb(0,160,0);
+    transition-duration: 0.25s;
+}
+
+header h1:hover {
+    color: rgb(0,208,0);
+}
+
+header h1:active {
+    color: rgb(0,255,0);
+}
+
+header a.link {
+    color: rgb(192,192,192);
+    transition-duration: 0.25s;
+}
+
+header a.link:hover {
+    color: rgb(232,232,232);
+}
+
+header a.link:active {
+    color: rgb(255,255,255);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.col-subtitle {
+    padding-top: 15px;
+}
+
+/*Body*/
+body .content {
+    padding-left: 10px;
+    height: 500px;
+}
+
+.form-group {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    width: 50%;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.btn{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+td .btn{
+    padding-top: 0px;
+}
+
+.form-control:focus, .btn:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.login-upper {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 50%;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.login-upper span{
+    padding-left: 10px;
+}
+
+.col.col-small {
+    max-width: 200px;
+}
+
+.list {
+    list-style-type: none;
+    padding-left: 0;
+}

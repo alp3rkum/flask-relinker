@@ -1,0 +1,27 @@
+{% include 'partials/_header.html' %}
+<div class="login-upper text-center">
+    <span><label>I'm:</label></span><span><input name="login" value="login" type="radio">Logging In</span><span><input name="login" value="signup" type="radio">Signing Up</span>
+</div>
+    <div class="div-login">
+        <form method="POST">
+            <div class="form-group">
+                <label>Username:</label><span><input name="username-login" class="form-control" type="text" placeholder="Username" required></span>
+                <label>Password:</label><span><input name="password-login" class="form-control" type="password" placeholder="Password" required></span>
+                <a href="/renewpass" class="link">Forgot Your Password?</a><br/>
+                <button formaction="/login" class="btn" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+    <div class="div-signup" style="display: none;">
+        <form method="POST">
+            <div class="form-group">
+                <label>Username:</label><span><input name="username-signup" class="form-control" type="text" placeholder="Username" required></span>
+                <label>E-Mail:</label><span><input name="email" class="form-control" type="email" placeholder="E-Mail" required></span>
+                <label>Password:</label><span><input name="password-signup" class="form-control" type="password" placeholder="Password" required></span>
+                <label>Confirm Password:</label><span><input name="confirm-password" class="form-control" type="password" placeholder="Confirm Password" required></span>
+                <button formaction="/signup" class="btn" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</form>
+{% include 'partials/_footer.html' %}

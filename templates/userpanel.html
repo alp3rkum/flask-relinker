@@ -1,0 +1,42 @@
+{% include 'partials/_header.html' %}
+<div class="row">
+    <div class="col col-small">
+        <div>
+            <h4 style="height: 32px;">{{ user[1] }}</h4>
+            <hr/>
+        </div>
+        <hr/>
+        <div class="text-center col-user">
+            <h5>Account Settings</h5>
+            <ul class="list text-center">
+                <li><a href="/update/email" class="link list-link">Change E-Mail</a></li>
+                <li><a href="/update/password" class="link list-link">Change Password</a></li>
+                <li><a href="/delete/account" class="link list-link">Delete Account</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col col-large">
+        <div>
+            <h4 style="height: 40px;">URLs</h4>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Original URL</th>
+                        <th>Short URL</th>
+                        <th>Delete URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for link in userLinks %}
+                        <tr>
+                            <td>{{ link[2] }}</td>
+                            <td>{{ link[3] }}</td>
+                            <td><form method="POST"><button formaction="/delete/link/{{ link[0] }}" class="btn">Delete</button></form></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% include 'partials/_footer.html' %}

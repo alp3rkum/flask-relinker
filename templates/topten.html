@@ -1,0 +1,27 @@
+{% include 'partials/_header.html' %}
+<div class="text-center">
+    <h3>Top Ten Shortened Links</h3>
+    <hr/>
+    <p>Here are top ten most shortened links by Flask Relinker members, just in case you need a quick reference.</p>
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Original URL</th>
+                <th>Short URL</th>
+                <th>How Many Users Shortened?</th>
+                <th>Copy Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for link in topTen %}
+                <tr>
+                    <td>{{ link[0] }}</td>
+                    <td>{{ link[1] }}</td>
+                    <td>{{ link[2] }}</td>
+                    <td><button class="btn" onclick="copyToClipboard('{{ link[1] }}')">Copy</button></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% include 'partials/_footer.html' %}

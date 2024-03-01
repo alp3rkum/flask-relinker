@@ -1,0 +1,18 @@
+{% include 'partials/_header.html' %}
+<div class="text-center">
+    <h3>Update E-Mail</h3>
+    <form action="/update/email" method="POST">
+        <div class="form-group">
+            <label for="email">Enter your current E-Mail</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <label for="new-email">Enter your new E-Mail</label>
+            <input type="email" class="form-control" id="new-email" name="new-email" required>
+            <label for="new-email">Your Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            <label for="confirm-password">Confirm your Password</label>
+            <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+            <button type="submit" class="btn">Update E-Mail</button>
+        </div>
+    </form>
+</div>
+{% include 'partials/_footer.html' %}

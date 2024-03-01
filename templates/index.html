@@ -1,0 +1,28 @@
+{% include 'partials/_header.html' %}
+<div class="content">
+    {% if not user %}
+        <p>Welcome to Flask Relinker, the Pythonic URL Shortener. This application was designed with the task of harnessing the power of <a class="link" href="https://tinyurl.com/app">TinyUrl</a> for non-users all while being extra convenient and looking... erm... Pythonic.</p>
+    {% else %}
+        <p>Welcome to Flask Relinker, the Pythonic URL Shortener. This application was designed with a <a class="link" href="/algorithm">URL shortening algorithm</a> reserved for users to ensure safety and convenience.</p>
+    {% endif %}
+        <p>Coded in HTML, CSS, Bootstrap, Javascript and Python. Currently under development.</p>
+    <p>Have fun shortening your URL's :)</p>
+<form action="/" method="POST">
+    <div class="form-group">
+        <span><label>URL To Shorten</label></span><span><input name="url" class="form-control" title="The URL you want to shorten" type="text" placeholder="https://url.com" required></span>
+        <button class="btn" type="submit">Shorten!</button>
+    </div>
+</form>
+    {% if short_url %}
+        <div class="text-center">
+            <p>Shortened URL: <a class="link" target="_blank" href="{{ short_url }}" title="Shortened URL (opens page in new tab)">{{ short_url }}</a></p>
+            {% if user %}
+                <form method="POST">
+                    <button formaction="/save" class="btn" type="submit">Save Link</button>
+                </form>
+            {% endif %}
+        </div>  
+    {% endif %}
+
+</div>
+{% include 'partials/_footer.html' %}

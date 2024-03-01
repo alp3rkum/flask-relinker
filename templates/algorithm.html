@@ -1,0 +1,15 @@
+{% include 'partials/_header.html' %}
+<div class="content">
+    <div class="text-center">
+        <h2>Flask Relinker Algorithm</h2>
+    </div>
+    <p>The Flask Relinker Custom Algorithm is an URL shortening algorithm written in Python (as this application uses Flask for its back-end) to shorten your URLs with improved safety and convenience. This algorithm is the heart of the Flask Relinker, and is reserved for the members of the website.</p>
+    <h3>Features</h3>
+    <ul>
+        <li><b>SHA-384 Hashing Algorithm:</b> While SHA-256 is a reliable hashing algorithm, Flask Relinker Custom Algorithm ups the ante a little bit more and makes use of <i>SHA-384</i> to ensure improved safety and prevention of collisions. Though it might not appear any different in your searchbar, the URL is specifically designed to run through Flask Relinker.</li>
+        <li><b>Link Saving Feature:</b> Reserved for members only, the feature to save your favorite links is also present in Flask Relinker. Free members can save up to 10 links.</li>
+    </ul>
+    <h3>How Does an URL Shortener Run?</h3>
+    <p>While it appears a bit mysterious, an URL Shortener application actually has a simple principle. The shortened URL is a route that is accessible through the application's backend. Using this route, the application redirects you to the respective page (if the application has any) and then redirects you to the actual URL. Nothing truly magical, but nothing too ordinary either.</p>
+</div>
+{% include 'partials/_footer.html' %}

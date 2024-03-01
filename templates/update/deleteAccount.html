@@ -1,0 +1,14 @@
+{% include 'partials/_header.html' %}
+<div class="text-center">
+    <h3>Delete Account</h3>
+    <p><b>WARNING!</b> If you delete your account, you will not get any e-mails from Flask Relinker to be informed about up and coming features, save your links, or use our self-developed algorithm to shorten your links. If you're sure about this, please enter your password.</p>
+    <form action="/delete/account" method="POST">
+        <div class="form-group">
+            <label for="password">Enter your password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            <label for="confirm-password">Confirm your password</label>
+            <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+            <button type="submit" class="btn">Delete Account</button>
+        </div>
+</div>
+{% include 'partials/_footer.html' %}
